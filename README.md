@@ -21,7 +21,7 @@ C'est un projet relativement long et complet : l'objectif est a minima que tu pu
   Si la vie atteint zéro, le personnage est mort.
   Difficile de faire plus simple... Alors allons-y ! On va commencer par coder tout ça dans le fichier player.rb qui va donc accueillir la classe Player dont le but est de modéliser un joueur. Je vais te décrire chaque caractéristique d'un objet Player, charge à toi d'écrire le code !
 
-    a) Player : attributs et initialize
+ a) Player : attributs et initialize
     Un joueur possède 2 attributs que tu vas mettre en attr_accessor : un nom @name (string) et un niveau de vie @life_points (integer).
 
     Quand on veut créer un objet Player, on ne met que son nom en entrée car le niveau de vie est le même pour tout le monde au début (10 pts de vie). Écris la méthode initialize afin qu'on ait la réaction suivante si on lance app.rb et qu'on utilise PRY.
@@ -83,3 +83,8 @@ C'est un projet relativement long et complet : l'objectif est a minima que tu pu
     Et oui, si jamais José (player2) venait à être tué en premier, tu vas vite te rendre compte qu'il peut malgré tout porter une dernière attaque sur Josiane (et potentiellement la tuer aussi). Pas terrible : ça serait considéré comme un bug par un utilisateur extérieur ! On doit gérer ce cas.
 
     Juste après l'attaque de Josiane (player1) sur José (player2), rajoute un petit if qui teste si player2 est mort (ses points de vie sont négatifs ou nuls). Si c'est le cas, il nous faut sortir immédiatement de la boucle while : c'est faisable grâce à la ligne break.
+
+
+
+
+   

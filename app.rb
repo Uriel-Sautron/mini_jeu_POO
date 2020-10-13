@@ -25,4 +25,4 @@ def battle
   
 end
 battle
-#binding.pry
+binding.pry
