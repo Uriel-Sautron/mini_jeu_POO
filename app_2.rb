@@ -6,23 +6,23 @@ require_relative 'lib/player'
 
 @enemies = []
 
-#def welcome
+def welcome
   puts " ""~"*24
   puts "|   Bienvenue sur 'ILS VEULENT TOUS MA POO' !   |"
   puts "|Le but du jeu est d'être le dernier survivant !|"
   puts " ""~"*24
-#end
+end
 
-#def choose_name
+def choose_name
   puts "Donne un nom a ton Guerrier :"
   print "=>"
-  @name = gets.chomp
-  user = HumanPlayer.new(@name)
-#end
+  human_name = gets.chomp
+  user = HumanPlayer.new(human_name)
+end
 
 
 
-#def fight
+def fight(user)
   @enemies << player1 = Player.new("Josiane")
   @enemies << player2 = Player.new("José")
   while user.life_points > 0 && (player1.life_points > 0 || player2.life_points >0)
@@ -66,8 +66,14 @@ require_relative 'lib/player'
     puts "Loser ! Tu as perdu !"
   end
  
-#end
-      
+end
+
+def performe
+  welcome
+  user = choose_name 
+  fight(user)
+end  
+performe
 #binding.pry 
 
          
